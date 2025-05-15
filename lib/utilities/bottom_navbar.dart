@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyBottomNavBar extends StatelessWidget {
   final int currentIndex;
@@ -13,11 +14,11 @@ class MyBottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(10), // outer spacing
-      padding: EdgeInsets.symmetric(vertical: 2), // inner spacing or size of the container
+      margin: EdgeInsets.all(10.r), // outer spacing
+      padding: EdgeInsets.symmetric(vertical: 2.h), // inner spacing or size of the container
       decoration: BoxDecoration(
         color: Color(0xFFB6C687), 
-        borderRadius: BorderRadius.circular(30), 
+        borderRadius: BorderRadius.circular(30.r), 
         boxShadow: [
           BoxShadow(
             color: Colors.black12,

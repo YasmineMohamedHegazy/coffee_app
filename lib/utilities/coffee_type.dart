@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CoffeeType extends StatelessWidget {
   final String coffeeType;
@@ -17,10 +18,10 @@ class CoffeeType extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.only(left: 25.0),
+        padding: EdgeInsets.only(left: 25.0.w),
         child: Text(coffeeType,
         style: TextStyle(
-          fontSize: 16,
+          fontSize: 16.sp,
           fontWeight: FontWeight.bold,
           color: isSelected ? Color(0xFF98A95F) : Color(0xFF4C2B08) //green when selected other wise it is brown
           ),

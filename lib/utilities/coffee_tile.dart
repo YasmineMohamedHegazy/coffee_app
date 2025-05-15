@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CoffeeTile extends StatelessWidget {
   final String coffeeImagePath;
@@ -19,7 +20,7 @@ class CoffeeTile extends StatelessWidget {
       padding: const EdgeInsets.only(left: 25.0, bottom: 25),
       child: Container(
         padding: EdgeInsets.all(12),
-        width: 200,
+        width: 200.w,
         decoration: BoxDecoration(
           color: Color(0xFFB6C687),
           borderRadius: BorderRadius.circular(12),
@@ -32,7 +33,7 @@ class CoffeeTile extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: Image.asset(coffeeImagePath,
-              height: 200,
+              height: 200.h,
               width: double.infinity, // fill the container s width
               fit: BoxFit.cover, // fills the space with no disortion m 
               ),
@@ -46,9 +47,9 @@ class CoffeeTile extends StatelessWidget {
                 children: [
                   Text(
                     coffeeName,
-                    style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Color(0xFF4C2B08)),
+                    style: TextStyle(fontSize: 20.sp,fontWeight: FontWeight.bold,color: Color(0xFF4C2B08)),
                   ),
-                  SizedBox(height: 4),
+                  SizedBox(height: 4.h),
                   Text(
                     coffeeDescription,
                     style: TextStyle(color: Color(0xFF65493B)),

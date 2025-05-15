@@ -2,6 +2,7 @@ import 'package:coffeeapp/utilities/bottom_navbar.dart';
 import 'package:coffeeapp/utilities/coffee_tile.dart';
 import 'package:coffeeapp/utilities/coffee_type.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
@@ -47,12 +48,12 @@ class HomePage extends StatefulWidget {
         leading: Icon(Icons.menu),
         actions: [
           Padding(
-            padding: const EdgeInsets.only(right: 20.0),
+            padding: EdgeInsets.only(right: 20.0.w),
             child: Icon(Icons.person),
           )
         ],
       ),
-            bottomNavigationBar: MyBottomNavBar(
+        bottomNavigationBar: MyBottomNavBar(
         currentIndex: _selectedIndex,
         onTap: (index) {
           setState(() {
@@ -61,7 +62,6 @@ class HomePage extends StatefulWidget {
         },
       ),
 
-    
     body: SingleChildScrollView(
       padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
     child: Column(
@@ -69,18 +69,18 @@ class HomePage extends StatefulWidget {
       children: [
         // Find the best coffee
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25.0),//equal hor padding (right and left)
+          padding: EdgeInsets.symmetric(horizontal: 25.0.w),//equal hor padding (right and left)
           child: Text('Find the Best Coffee Sip Here.',
           style: GoogleFonts.bebasNeue(
-            fontSize: 48, //color: Color(0xFF4C2B08)
+            fontSize: 48.sp, //color: Color(0xFF4C2B08)
           )
         ),
       ),
-      SizedBox(height: 25),
+      SizedBox(height: 25.h),
 
         // search bar
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25.0),
+          padding: EdgeInsets.symmetric(horizontal: 25.0.w),
           child: TextField(
             decoration: InputDecoration(
               prefixIcon: Icon(Icons.search),
@@ -94,11 +94,11 @@ class HomePage extends StatefulWidget {
             ),
           ),
         ),
-        SizedBox(height: 25),
+        SizedBox(height: 25.h),
 
         // horizontal listview of coffee types(capuccino,latte..)
         Container(
-          height: 50,
+          height: 50.h,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: coffeeType.length,
@@ -115,7 +115,7 @@ class HomePage extends StatefulWidget {
       ),    
             
               // First horizontal list
-              SizedBox(height:385,
+              SizedBox(height:385.h,
               child: 
               ListView(
                 scrollDirection: Axis.horizontal,
@@ -141,21 +141,21 @@ class HomePage extends StatefulWidget {
                 ],
               ),
              ),
-             SizedBox(height: 20),
+             SizedBox(height: 20.h),
              // Best sellers
-             Padding(padding: EdgeInsets.symmetric(horizontal: 25.0),
+             Padding(padding: EdgeInsets.symmetric(horizontal: 25.0.w),
              child: Text(
               'Best Sellers',
               style: GoogleFonts.bebasNeue(
-                fontWeight: FontWeight.bold,fontSize: 24,
+                fontWeight: FontWeight.bold,fontSize: 24.sp,
                 letterSpacing: 1.5
               ),
              ),   
             ),
-            SizedBox(height:10),
+            SizedBox(height:10.h),
             // Second List
             SizedBox(
-              height: 385,
+              height: 385.h,
             child: 
             ListView(
               scrollDirection: Axis.horizontal,
